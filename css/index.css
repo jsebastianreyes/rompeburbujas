@@ -28,13 +28,9 @@ body{
   padding: 0;
   color: var(--white);
   overflow: hidden;
+  background: linear-gradient(180deg, #D5FED9 0%, #6F53FD 100%);
 
-  background-image: url(../img/spongebob.png);
-  /* background-size: cover; */
-  background-position: center;
-  background-size: 25%;
-  /* backdrop-filter: blur(10); */
-  /* filter: blur(20px); */
+
 }
 
 p{
