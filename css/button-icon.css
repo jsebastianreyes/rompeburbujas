@@ -1,0 +1,48 @@
+.buttonIcon{
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 0;
+  transition: .5s transform;
+}
+
+.buttonIcon:hover{
+  transform: scale(1.1);
+}
+
+.buttonIcon.is-small{
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+}
+
+.buttonIcon.is-small  i.icon-close{
+  inline-size: .6rem;
+  block-size: .6rem;
+  transform: translate(-1px, 0);
+}
+
+.buttonIcon.is-red{
+  background: var(--adicalred);
+  filter: drop-shadow(0px 2px var(--adicalred));
+}
+.buttonIcon.is-violet{
+  background: var(--mediumorchid);
+  filter: drop-shadow(0px 2px var(--mediumorchid));
+}
+.buttonIcon.is-blue{
+  background: var(--skyblue);
+  filter: drop-shadow(0px 2px var(--skyblue));
+}
+.buttonIcon.is-green{
+  background: var(--lawngreen);
+  filter: drop-shadow(0px 2px var(--lawngreen));
+}
+
+.buttonIcon:active{
+  transform: scale(.9);
+}
+
+

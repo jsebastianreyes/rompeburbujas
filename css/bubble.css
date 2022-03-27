@@ -1,0 +1,101 @@
+.bubble{
+  inline-size: 50px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(196, 196, 196, 0) 85.42%, rgba(21, 190, 243, 0.69) 100%);
+  display: block;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  animation: drop linear;
+  /* animation-duration: 5s; */
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
+  top: 0;
+  z-index: 999;
+}
+
+
+@keyframes drop {
+  from{
+    /* transform: translateY(0px); */
+    top: 0;
+  }
+
+  to{
+    top: 100%;
+    /* inline-size: 0; */
+    /* display: non; */
+    /* transform: translateY(10px); */
+    /* inline-size: 0px; */
+  }
+}
+
+.bubble span{
+  /* background-color: red; */
+  background: linear-gradient(180deg, rgba(21, 190, 243, 0.44) 0%, rgba(255, 255, 255, 0.02) 88.54%);
+  transform: rotate(1.32deg);
+  block-size: 45%;
+  inline-size: 70%;
+  border-radius:50%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.bubble span::after{
+  content:'';
+  position: absolute;
+  /* height: 20%; */
+  block-size: 30%;
+  inline-size: 40%;
+  inset-block-start: 15%;
+  inset-inline-start: 15%;
+  transform: rotate(-21.82deg);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.88) 76.04%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+
+
+
+.bubble.is-animated{
+  animation: drop linear, rubberBand  linear;
+  /* animation-duration: 1s !important; */
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes rubberBand {
+
+
+  0%{
+    /* background-position: 0 15px; */
+    /* transform: translateY(4px); */
+    background:
+    radial-gradient(rgba(21, 190, 243, 0.44), transparent 16%) 0 0,
+    radial-gradient(rgba(21, 190, 243, 0.44), transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color: transparent;
+    background-size:12px 12px;
+    /* transform: scale3d(.85, 1.05, 1); */
+  }
+
+
+
+  100% {
+    transform: scale(.7);
+    background-position: 0 10px;
+    background: transparent;
+    display: none;
+  }
+}
+
+
+.bubble.bubble.is-animated span{
+  display: none;
+}
+
+

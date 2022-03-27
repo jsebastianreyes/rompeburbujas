@@ -1,0 +1,26 @@
+.buttonLarge{
+  font: var(--body-24bold);
+  color: white;
+  inline-size: 7.37rem;
+  block-size: 2.68rem;
+  border-radius: 2rem;
+  border-color: var(--white);
+  border: 3px solid;
+  cursor: pointer;
+  background: rgba(103, 235, 0, 1);
+  background: linear-gradient(27deg, rgba(166, 242, 8, 1) 0%, rgba(103, 235, 0, 1) 100%);
+  margin: auto;
+  filter: drop-shadow(0px 2px 3px #000);
+  outline: 0;
+  transition: .5s transform;
+}
+
+
+.buttonLarge:hover{
+  transform: scale(1.1);
+}
+
+
+.buttonLarge:active{
+  transform: scale(.9);
+}

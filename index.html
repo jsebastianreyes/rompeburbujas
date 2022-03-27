@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Rompe Burbujas</title>
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Rompe Burbujas" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jsebastianreyes.github.io/rombeburbujas" />
+  <meta property="og:image" content="https://jsebastianreyes.github.io/rombeburbujas/img/rombe-burbujas.jpg" />
+  <meta property="og:description" content="Divertido juego de romper burbujas 🤩">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body class="body" id="body">
+  <div class="wrapper">
+    <div class="loader" id="loader">
+      <div class="loader-txt">
+        <p class="loader-title is-gradient">Rompe</p>
+        <p class="loader-title">Burbujas</p>
+      </div>
+      <img src="./img/spongebob.png" alt="Spongebob" width="150px">
+      <div class="loader-bottom">
+        <span id="txt-loader" class="txt-loader"></span>
+        <button class="buttonLarge" id="play" aria-label="Iniciar Juego">Jugar</button>
+      </div>
+    </div>
+    <main id="app" class="app" hidden>
+      <div class="header">
+        <div class="header-left">
+          <div class="menu">
+            <button id="cancel" class="buttonIcon is-red" aria-label="Cancelar juego"> <i aria-hidden="true" class="icon-close"></i> </button>
+            <button id="setting" class="buttonIcon is-violet" aria-label="Ajustar Velocidad"> <i aria-hidden="true" class="icon-setting"></i> </button>
+            <button id="reset" class="buttonIcon is-blue" aria-label="Reiniciar Juego"> <i aria-hidden="true" class="icon-refresh"></i> </button>
+            <button id="pause" class="buttonIcon is-green" aria-label="Pausar Juego"> <i aria-hidden="true" class="icon-play"></i> </button>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="speed"><span>Velocidad x10</span></div>
+          <div class="coins">
+            <p> <span id="coins">0</span><i class="icon-coins"></i></p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="bubble">
+        <span></span>
+      </div> -->
+    </main>
+<!--Modales-->
+<dialog class="modal" id="modal-velocidad">
+  <button id="close" class="buttonIcon is-red is-small close" aria-label="Cerrar"> <i aria-hidden="true"
+      class="icon-close"></i> </button>
+  <div class="modal-contenido">
+    <p>Velocidad</p>
+    <p id="txtSpeed">x10</p>
+    <form action="#">
+      <input name="speed" class="slideSpeed" id="speed" type="range" min="10" max="100" value="10" step="10">
+    </form>
+    <button class="buttonLarge" id="saveSpeed" aria-label="Iniciar Juego">Aplicar</button>
+  </div>
+</dialog>
+<dialog class="modal" id="modal-paused">
+  <div class="modal-contenido">
+    <p>Juego pausado</p>
+    <button class="buttonLarge" id="resume" aria-label="Reanudar juego">Reanudar</button>
+  </div>
+</dialog>
+<dialog class="modal" id="modal-finished">
+  <button id="closeFinish" class="buttonIcon is-red is-small close" aria-label="Cerrar"> <i aria-hidden="true"
+      class="icon-close"></i> </button>
+  <div class="modal-contenido">
+    <p>¿Deseas terminar el juego?</p>
+    <button class="buttonLarge" id="btn-finished" aria-label="Terminar el juego">Terminar</button>
+  </div>
+</dialog>
+  </div>
+
+
+  <!--modales-->
+
+  <script src="./js/index.js" type="module"></script>
+</body>
+</html>

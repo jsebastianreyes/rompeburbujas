@@ -1,0 +1,15 @@
+@import './icons.css';
+@import './header.css';
+@import './button-icon.css';
+
+.app{
+  block-size: 100vh;
+  box-sizing: border-box;
+  background: url('../img/bg-2.jpg');
+  background-size: cover;
+  background-position: center;
+  /* display: none; */
+  overflow: hidden;
+  /* border: 8px solid red; */
+  position: relative;
+}

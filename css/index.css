@@ -1,0 +1,43 @@
+@import './loader.css';
+@import './button-large.css';
+@import './app.css';
+@import './modal.css';
+@import './bubble.css';
+@import './wrapper.css';
+
+
+
+:root{
+  --baseFont: 'Roboto Condensed', sans-serif;
+  --white: #ffffff;
+  --black: #333333;
+  --adicalred: #ff4672;
+  --mediumorchid: #b169fa;
+  --skyblue: #4cdafe;
+  --lawngreen: #92f200;
+  --body-24bold: 700 1.5rem/normal var(--baseFont);
+}
+
+html{
+  overflow: hidden;
+}
+
+body{
+  font: var(--body-24bold);
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  overflow: hidden;
+
+  background-image: url(../img/spongebob.png);
+  /* background-size: cover; */
+  background-position: center;
+  background-size: 25%;
+  /* backdrop-filter: blur(10); */
+  /* filter: blur(20px); */
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}

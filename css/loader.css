@@ -1,0 +1,75 @@
+.loader{
+  block-size: 100vh;
+  background: linear-gradient(180deg, #D5FED9 0%, #6F53FD 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-inline: 1.375rem;
+  padding-block: 2.5rem;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  overflow: hidden;
+
+}
+
+.loader[hidden]{
+  display: none;
+}
+
+
+.loader-bottom{
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  color: #6508FD;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  display: flex;
+  position: relative;
+}
+
+.loader-title{
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
+  line-height: 5.2rem;
+  text-align: center;
+  color: var(--white);
+
+  filter: drop-shadow(0px 2px 3px #000);
+
+}
+
+.loader-title.is-gradient{
+  background: linear-gradient(180deg, #41CAF0 49.03%, #A17CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* text-fill-color: transparent; */
+}
+
+
+
+.txt-loader{
+  letter-spacing: .5px;
+  overflow: hidden;
+
+}
+
+.txt-loader.is-animated{
+  animation: loader 1s infinite alternate steps(6);
+
+}
+
+@keyframes loader{
+  from{
+    width: 80%;
+  }
+
+  to{
+    width: 100%;
+  }
+}

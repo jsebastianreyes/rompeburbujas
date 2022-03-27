@@ -1,0 +1,26 @@
+[class^="icon-"], [class*=" icon-"] {
+  inline-size:1.2rem;
+  block-size: 1.2rem;
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-coins{
+  background-image: url(../icons/coins.svg);
+}
+.icon-refresh{
+  background-image: url(../icons/refresh.svg);
+}
+.icon-close{
+  background-image: url(../icons/close.svg);
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+.icon-setting{
+  background-image: url(../icons/setting.svg);
+}
+.icon-play{
+  background-image: url(../icons/play.svg);
+}
